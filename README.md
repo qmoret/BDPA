@@ -15,7 +15,6 @@ Hadoop 2.7.3 pseudo distributed on MacOS, with native libraries installed.
 Retrieve StopWords (# occurences > 4000) in a corpus of documents.
 
 1. Import data into HDFS, in  `~/StopWords/input`
-
 2. Compile java file: `javac StopWords.java -cp $(hadoop classpath)`
 3. Compile JAR : `jar cf sw.jar StopWords*.class`
 4. Run JAR : `hadoop jar sw.jar StopWords StopWords/input StopWords/output`
@@ -26,6 +25,7 @@ Retrieve StopWords (# occurences > 4000) in a corpus of documents.
 ### InvertedIndex
 
 Shows the list of documents in which words (excluding stop words) appear.
+
 1. Compile java file: `javac InvertedIndex.java -cp $(hadoop classpath)`
 2. Compile JAR : `jar cf ii.jar InvertedIndex*.class`
 3. Run JAR : `hadoop jar ii.jar InvertedIndex StopWords/input InvertedIndex/output StopWords/stopwords.csv`
