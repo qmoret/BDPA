@@ -79,7 +79,7 @@ public class StopWords {
     job.setMapperClass(TokenizerMapper.class);
     job.setCombinerClass(MyCombiner.class);
     job.setReducerClass(IntSumReducer.class);
-    job.setNumReduceTasks(50);
+    job.setNumReduceTasks(10);
     job.setOutputKeyClass(Text.class);
     job.setOutputValueClass(IntWritable.class);
     FileInputFormat.addInputPath(job, new Path(args[0]));
